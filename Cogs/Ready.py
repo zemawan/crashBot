@@ -9,8 +9,8 @@ class Ready(commands.Cog):
 		self.bot = bot
 
 	async def updateUsers(self):
-	    for action_id, action_data in Config.deletedActions.items():
-	        for action_type, users in action_data.items():
+	    for actionId, actionData in Config.deletedActions.items():
+	        for actionType, users in actionData.items():
 	            for user, cases in list(users.items()):
 	                for i, case in enumerate(cases):
 	                    cases[i] -= 1
